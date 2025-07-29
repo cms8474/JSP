@@ -1,24 +1,23 @@
 <%@page import="vo.User1VO"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
-<%@page import="java.sql.Connection"%>
 <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%
 	// 전송데이터 수신
 	String user_id = request.getParameter("user_id");
-	String host = "jdbc:oracle:thin:@localhost:1521:xe";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	String user = "zxy0575";
-	String pass = "1234";
+	String password = "1234";
 	
-	// 수정할 사용자 객체
 	User1VO user1 = null;
 	
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		
-		Connection conn = DriverManager.getConnection(host, user, pass);
-		String sql = "SELECT * FROM USER1 WHERE USER_ID=?";
+		Connection conn = DriverManager.getConnection(url, user, password);
+		String sql = "SELECT * FROM USER2 WHERE USER_ID=?";
 		PreparedStatement psmt = conn.prepareStatement(sql);
 		psmt.setString(1, user_id);
 		
@@ -31,7 +30,6 @@
 			user1.setHp(rs.getString(3));
 			user1.setAge(rs.getInt(4));
 		}
-		
 		rs.close();
 		psmt.close();
 		conn.close();
@@ -40,23 +38,22 @@
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-
+	
 %>
-
-
 <!DOCTYPE html>
 	<html>
 	<head>
 		<meta charset="UTF-8">
-		<title>user1::modify</title>
+		<title>User2:modify</title>
 	</head>
+	
 	<body>
-		<h3>User1 수정</h3>
+		<h3>User2 수정</h3>
 		
 		<a href="../jdbc.jsp">처음으로</a>
 		<a href="./List.jsp">목록으로</a>
 		
-		<form action="./proc/modify.jsp" method="posd">
+		<form action="./proc/modify.jsp" method="post">
 			<table border="1">
 				<tr>
 					<td>아이디</td>
@@ -81,6 +78,5 @@
 				</tr>
 			</table>
 		</form>
-		
 	</body>
 </html>
