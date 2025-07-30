@@ -26,4 +26,19 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
+    <!-- WAS Connection Pool 설정 -->
+    <Resource
+    	name="jdbc/zxy0575"
+    	auth="Container"
+    	type="javax.sql.DataSource"
+    	driverClassName="oracle.jdbc.driver.OracleDriver"
+    	url="jdbc:oracle:thin:@localhost:1521:xe"
+    	username="zxy0575"
+    	password="1234"
+    	maxTotal="13"
+    	maxIdle="13"
+    	maxWaitMillis="3000"
+    />
 </Context>
+
+
