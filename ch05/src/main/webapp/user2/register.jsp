@@ -25,7 +25,7 @@
 					<td>휴대폰</td>
 					<td><input type="text" name="hp" placeholder="hp"></td>
 				</tr>
-				</tr>
+				<tr>
 					<td>나이</td>
 					<td><input type="number" name="age" placeholder="age"></td>
 				</tr>

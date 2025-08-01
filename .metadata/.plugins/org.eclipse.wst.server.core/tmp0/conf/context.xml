@@ -14,8 +14,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
---><!-- The contents of this file will be loaded for each web application -->
-<Context allowCasualMultipartParsing="true">
+--><!-- The contents of this file will be loaded for each web application --><Context>
 
     <!-- Default set of monitored resources. If one of these changes, the    -->
     <!-- web application will be reloaded.                                   -->
@@ -27,33 +26,16 @@
     <!--
     <Manager pathname="SESSIONS.ser" />
     -->
-    <!-- WAS Connection Pool 설정 -->
-    <Resource
-    	name="jdbc/zxy0575"
-    	auth="Container"
-    	type="javax.sql.DataSource"
-    	driverClassName="oracle.jdbc.driver.OracleDriver"
-    	url="jdbc:oracle:thin:@localhost:1521:xe"
-    	username="zxy0575"
-    	password="1234"
-    	maxTotal="13"
-    	maxIdle="13"
-    	maxWaitMillis="3000"
-    />
     
-        <!-- WAS Connection Pool 설정 -->
-    <Resource
-    	name="jdbc/shop"
-    	auth="Container"
-    	type="javax.sql.DataSource"
-    	driverClassName="oracle.jdbc.driver.OracleDriver"
-    	url="jdbc:oracle:thin:@localhost:1521:xe"
-    	username="shop"
-    	password="1234"
-    	maxTotal="13"
-    	maxIdle="13"
-    	maxWaitMillis="3000"
-    />
+    <Resource 
+        name="jdbc/shop" 
+        auth="Container" 
+        type="javax.sql.DataSource"
+        maxTotal="100" 
+        maxIdle="30" 
+        maxWaitMillis="10000"
+        username="shop" 
+        password="1234" 
+        driverClassName="oracle.jdbc.driver.OracleDriver"
+        url="jdbc:oracle:thin:@localhost:1521:XE"/>
 </Context>
-
-
