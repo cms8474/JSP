@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<!-- 
+		250731 최민수
+		JSP Servlet 실습
+		 -->
+	</head>
+	
+	<body>
+		<h3>서블릿(Servlet)</h3>
+		
+		<a href="/ch08/hello.do">Hello Servlet</a><br/>
+		<a href="/ch08/welcome.do">Welcome Servlet</a><br/>
+		<a href="/ch08/greeting.do">Greeting Servlet</a><br/>
+		
+		<form action="/ch08/hello.do" method="post">
+			<input type="text" name="id" /><br/>
+			<input type="password" name="pw" /><br/>
+			<input type="submit" value="전송하기" />
+		</form>
+	
+	</body>
+</html>
