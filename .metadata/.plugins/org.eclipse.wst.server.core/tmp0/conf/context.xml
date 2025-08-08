@@ -38,4 +38,19 @@
         password="1234" 
         driverClassName="oracle.jdbc.driver.OracleDriver"
         url="jdbc:oracle:thin:@localhost:1521:XE"/>
-</Context>
+
+
+<Resource 
+    name="jdbc/studydb" 
+    auth="Container" 
+    type="javax.sql.DataSource"
+    maxTotal="100" 
+    maxIdle="30" 
+    maxWaitMillis="10000"
+    username="zxy0575" 
+    password="1234" 
+    driverClassName="com.mysql.cj.jdbc.Driver"
+    url="jdbc:mysql://localhost:3306/studydb?serverTimezone=Asia/Seoul"
+    validationQuery="SELECT 1"/>
+    
+ </Context>
