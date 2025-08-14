@@ -142,10 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\GGG\Desktop\workspace\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\GGG\Desktop\workspace\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ch10" path="/ch10" reloadable="true" source="org.eclipse.jst.jee.server:ch10">
-    
-    <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/shop" password="1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:XE" username="shop"/>
-</Context></Host>
+      <Context docBase="C:\Users\GGG\Desktop\workspace\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\GGG\Desktop\workspace\JSP\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\bankP" path="/bankP" reloadable="true" source="org.eclipse.jst.jee.server:bankP"/></Host>
     </Engine>
   </Service>
 </Server>
